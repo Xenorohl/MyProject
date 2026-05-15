@@ -471,7 +471,7 @@ nrow(matrix_species)
 
 # ggplotly(a)
     # there seems to be a problem
-    # some observation have a longitude higher than 7 (most of them have a latitude of 45) 
+    # some observation have a longitude higher than 7 (most of them have a longitude of 45 or higher) 
     # it's almost like the longitute is a copy of the latitude. Don't know why it happened
     # gotta remove those since they are absurd 
 
