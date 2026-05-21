@@ -36,6 +36,7 @@ library(extrafont)
 ######################################################
 
 ecosystem_raster = raster("./data/WorldEcosystem.tif") # "rasterising" the .tiff file from ./data toi work with it as a raster (with the package "raster") 
+    # this is not available in the current GitHub because it was too heavy
 print(ecosystem_raster) # basic information for the downloaded raster
 
 
