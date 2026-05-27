@@ -8,3 +8,5 @@ source("./source/climatic.r")
 
 source("./source/satellite_data.r") 
 
+source("./source/plots_and_stats.r")
+

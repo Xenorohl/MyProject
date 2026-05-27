@@ -212,10 +212,7 @@ nrow(matrix_full_eco_elev_clim) - sum(is.na(matrix_full_eco_elev_clim$ndvi_mean)
 matrix_final = na.omit(matrix_full_eco_elev_clim)
 
 head(matrix_final)
-
-
-
-### Saving the dataframe (matrix_final) as a csv file
+nrow(matrix_final) # 2951 rows, cool
 
 # write.csv(
 #     matrix_final,
