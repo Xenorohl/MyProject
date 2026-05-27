@@ -4,24 +4,24 @@
 
 ######################################################
 
-library(styler)
-tidyverse_style()
-library(raster)
-library(sf)
-library(rnaturalearth)
-library(ggplot2)
-library(XML)
-library(terra)
-library(gdalUtilities)
-library(paletteer)
-library(ggthemes)
-library(extrafont)
+# library(styler)
+# tidyverse_style()
+# library(raster)
+# library(sf)
+# library(rnaturalearth)
+# library(ggplot2)
+# library(XML)
+# library(terra)
+# library(gdalUtilities)
+# library(paletteer)
+# library(ggthemes)
+# library(extrafont)
 
-## install of packages 
-# install.packages(
-#     "XML",
-#      "gdalUtilities",
-#      "paletteer")
+# ## install of packages 
+# # install.packages(
+# #     "XML",
+# #      "gdalUtilities",
+# #      "paletteer")
 
 
 

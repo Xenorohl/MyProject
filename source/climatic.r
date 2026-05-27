@@ -4,18 +4,18 @@
 
 ######################################################
 
-library(Rchelsa)
-library(terra)
-library(dplyr)
-library(ggplot2)
-library(pals)
-library(ggthemes)
-library(extrafont)
-library(paletteer)
+# library(Rchelsa)
+# library(terra)
+# library(dplyr)
+# library(ggplot2)
+# library(pals)
+# library(ggthemes)
+# library(extrafont)
+# library(paletteer)
 
-# install Rchelsa via github
-# devtools::install_git("https://gitlabext.wsl.ch/karger/rchelsa.git")
-# install.packages("pals")
+# # install Rchelsa via github
+# # devtools::install_git("https://gitlabext.wsl.ch/karger/rchelsa.git")
+# # install.packages("pals")
 
 
 

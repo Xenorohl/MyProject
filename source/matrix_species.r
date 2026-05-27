@@ -4,21 +4,21 @@
 
 ######################################################
 
-library(styler)
-tidyverse_style() # for a coding-style closer to RStudio interface
-library(rgbif)         
-library(rnaturalearth) 
-library(ggplot2)      
-library(rinat)         
-library(raster)        
-library(dplyr)        
-library(sf) 
-library(plotly)
-library(rgl)
-library(htmlwidgets)
-library(ggthemes)
-library(extrafont)
-library(paletteer)
+# library(styler)
+# tidyverse_style() # for a coding-style closer to RStudio interface
+# library(rgbif)         
+# library(rnaturalearth) 
+# library(ggplot2)      
+# library(rinat)         
+# library(raster)        
+# library(dplyr)        
+# library(sf) 
+# library(plotly)
+# library(rgl)
+# library(htmlwidgets)
+# library(ggthemes)
+# library(extrafont)
+# library(paletteer)
 
 
 ### install 

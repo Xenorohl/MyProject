@@ -4,14 +4,14 @@
 
 ######################################################
 
-library(sf)
-library(rnaturalearth)
-library(elevatr)
-library(raster)
-library(ggplot2)
-library(ggthemes)
-library(extrafont)
-library(paletteer)
+# library(sf)
+# library(rnaturalearth)
+# library(elevatr)
+# library(raster)
+# library(ggplot2)
+# library(ggthemes)
+# library(extrafont)
+# library(paletteer)
 
 # Notes : 
   # This R script looks like almost 100% as the one posted on Moodle 

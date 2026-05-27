@@ -4,16 +4,16 @@
 
 ###############################################
 
-library(styler)
-tidyverse_style()
-library(ggplot2)
-library(paletteer)
-library(ggthemes)
-library(extrafont)
-#  font_import() if already done no need to do it again, takes a few minutes, done from with MacOS
-library(sf)
-library(rnaturalearth)
-library(cowplot)
+# library(styler)
+# tidyverse_style()
+# library(ggplot2)
+# library(paletteer)
+# library(ggthemes)
+# library(extrafont)
+# #  font_import() if already done no need to do it again, takes a few minutes, done from with MacOS
+# library(sf)
+# library(rnaturalearth)
+# library(cowplot)
 
 
 

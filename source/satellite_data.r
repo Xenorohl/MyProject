@@ -4,19 +4,19 @@
 
 ######################################################
 
-tidyverse_style()
-library(luna)
-library(MODIStsp)
-library(appeears)  
-library(terra)
-library(sf)
-library(rnaturalearth)
-library(ggplot2)
-library(dplyr)
-library(ggthemes)
-library(extrafont)
-library(paletteer)
-# font_import() # if already done no need to do it again, takes a few minutes
+# tidyverse_style()
+# library(luna)
+# library(MODIStsp)
+# library(appeears)  
+# library(terra)
+# library(sf)
+# library(rnaturalearth)
+# library(ggplot2)
+# library(dplyr)
+# library(ggthemes)
+# library(extrafont)
+# library(paletteer)
+# # font_import() # if already done no need to do it again, takes a few minutes
 
 
 
