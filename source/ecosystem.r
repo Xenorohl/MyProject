@@ -89,6 +89,7 @@ spatial_points = SpatialPoints(
     proj4string = CRS("+proj=longlat +datum=WGS84 +no_defs")
 )
 
+
 # x11()   # Important to open via another graphic device, otherwise the points are not alligned with the raster 
 # plot(
 #     ecosystem_CH, 
