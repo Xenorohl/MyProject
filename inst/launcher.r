@@ -1,3 +1,9 @@
+##### Packages 
+
+source("./inst/packages.r")
+
+
+
 ##### Intermediate project 
 
 source("./src/intermediate_project/matrix_species.r")
@@ -16,12 +22,12 @@ source("./src/intermediate_project/satellite_data.r")
 
 source("./src/final_project/analysis_0_ecological_question.r")
 
-source("./src/final_project/analysis_1_environmental.r")
+source("./src/final_project/analysis_1_tree_pref.r")
 
 source("./src/final_project/analysis_2_1_grid_pred.r")
 
 source("./src/final_project/analysis_2_2_random_forest.r")
 
-source("./src/final_project/analysis_3_tree_preference.r")
+source("./src/final_project/analysis_3_environmental.r")
 
 source("./src/final_project/analysis_4_final_panel.r")

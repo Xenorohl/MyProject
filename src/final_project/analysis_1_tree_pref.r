@@ -140,7 +140,7 @@ plot_a = ggplot(
     )
     ) + 
     geom_bar(
-        color = "grey40" 
+        color = "white" 
     ) + 
     scale_fill_paletteer_d(
         "MetBrewer::Archambault"
@@ -157,8 +157,8 @@ plot_a = ggplot(
         axis.text.x = element_text(size = 13), 
         plot.subtitle = element_text(size = 20),
         legend.position = "none",
-        plot.background = element_rect(colour = "white"),   
-        panel.background = element_blank(),      
+        plot.background = element_rect(fill = "white"),   
+        panel.background = element_rect(fill = "white"), 
         plot.title = element_text(size = 55),
         text = element_text(family = ".SF Compact Rounded")
     )
