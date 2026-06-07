@@ -1,5 +1,21 @@
 ######################################################
 
+##### Important note 
+
+######################################################
+
+    # this grid was made for the random forest analysis 
+    # this analysis comes after the "tree preference" one
+    # so this grid will be used to predict the distribution of A. muscaria and the two "best trees" in France 
+    # I chose France because it has a somewhat close climate compared to switzerland and found that the prediction could fit well 
+
+    # the final matrix is directly available in data/grid_final.csv if anything went wrong 
+    
+
+
+
+######################################################
+
 ##### spatial points creation 
 
 ######################################################

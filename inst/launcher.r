@@ -1,12 +1,27 @@
-source("./source/matrix_species.r")
+##### Intermediate project 
 
-source("./source/ecosystem.r")
+source("./src/intermediate_project/matrix_species.r")
 
-source("./source/elevation.r")
+source("./src/intermediate_project/ecosystem.r")
 
-source("./source/climatic.r")
+source("./src/intermediate_project/elevation.r")
 
-source("./source/satellite_data.r") 
+source("./src/intermediate_project/climatic.r")
+
+source("./src/intermediate_project/satellite_data.r") 
 
 
 
+##### Final project 
+
+source("./src/final_project/analysis_0_ecological_question.r")
+
+source("./src/final_project/analysis_1_environmental.r")
+
+source("./src/final_project/analysis_2_1_grid_pred.r")
+
+source("./src/final_project/analysis_2_2_random_forest.r")
+
+source("./src/final_project/analysis_3_tree_preference.r")
+
+source("./src/final_project/analysis_4_final_panel.r")

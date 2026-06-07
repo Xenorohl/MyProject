@@ -25,6 +25,7 @@ library(appeears)
 library(geosphere) 
 library(viridis)
 library(randomForest)
+library(caret)
 
 
 # install Rchelsa via github
