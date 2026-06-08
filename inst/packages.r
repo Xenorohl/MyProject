@@ -2,16 +2,20 @@ library(Rchelsa)
 library(sf)
 library(terra)
 library(dplyr)
+library(tidyr)
 library(ggplot2)
 library(pals)
 library(ggthemes)
 library(extrafont)
 library(paletteer)
+library(ggnewscale)
+library(gridGraphics)
 library(styler)
 library(raster)
 library(XML)
 library(gdalUtilities)
 library(rnaturalearth)
+library(rnaturalearthdata)
 library(elevatr)
 library(rgbif)          
 library(rinat)         
@@ -26,6 +30,9 @@ library(geosphere)
 library(viridis)
 library(randomForest)
 library(caret)
+library(fmsb)
+library(scales)
+library(png)
 
 
 # install Rchelsa via github
@@ -33,8 +40,9 @@ library(caret)
 # install.packages("pals")
 ## install of packages 
 # install.packages(
-#     "XML",
+#      "XML",
 #      "gdalUtilities",
-#      "paletteer")
+#      "paletteer",
+#      "ggradar")
 
 # font_import() # if already done no need to do it again, takes a few minutes, done with MacOS

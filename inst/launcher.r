@@ -28,6 +28,6 @@ source("./src/final_project/analysis_2_1_grid_pred.r")
 
 source("./src/final_project/analysis_2_2_random_forest.r")
 
-source("./src/final_project/analysis_3_environmental.r")
+source("./src/final_project/analysis_3_environment.r")
 
 source("./src/final_project/analysis_4_final_panel.r")

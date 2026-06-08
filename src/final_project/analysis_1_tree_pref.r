@@ -155,12 +155,12 @@ plot_a = ggplot(
     theme(
         axis.title.y = element_text(size = 20),
         axis.text.x = element_text(size = 13), 
-        plot.subtitle = element_text(size = 20),
+        plot.subtitle = element_text(size = 15),
         legend.position = "none",
         plot.background = element_rect(fill = "white"),   
         panel.background = element_rect(fill = "white"), 
-        plot.title = element_text(size = 55),
-        text = element_text(family = ".SF Compact Rounded")
+        plot.title = element_text(size = 30),
+        text = element_text(family = ".SF Compact Rounded", color = "grey20")
     )
 plot_a
     # as we can see Picea abies and Abies alba are the trees that are more often the closest to A. muscaria 
@@ -187,7 +187,8 @@ plot_b = ggplot(
         alpha = 0.6
     ) + 
     labs(
-        subtitle = "Distances for each species",
+        title = "Distances from A. muscaria",
+        subtitle = "For each tree species",
         x = "",
         y = "Distance [m]"
     ) +
@@ -199,10 +200,11 @@ plot_b = ggplot(
         legend.position = "none",
         axis.title.y = element_text(size = 20),
         axis.text.x = element_text(size = 13),
-        plot.subtitle = element_text(size = 30, face = "bold"),
-        plot.background = element_rect(colour = "white"),
-        panel.background = element_blank(), 
-        text = element_text(family = ".SF Compact Rounded")
+        plot.title = element_text(size = 30, face = "bold"),
+        plot.subtitle = element_text(size = 15),
+        plot.background = element_rect(fill = "white"),
+        panel.background = element_rect(fill = "white"), 
+        text = element_text(family = ".SF Compact Rounded", color = "grey20")
     )
 plot_b
     # the distinction isn't as clear as in plot_a 

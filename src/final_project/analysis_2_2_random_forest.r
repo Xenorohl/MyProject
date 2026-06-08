@@ -490,7 +490,7 @@ FR_shadow = st_geometry(FR) + c(0.2 , -0.3) # same as previously done in /src/in
 st_crs(FR_shadow) = st_crs(FR)
 
 x11()      
-ggplot() + 
+plot_c = ggplot() + 
     geom_sf(
         data = FR_shadow,   # projected shadow of france 
         fill = "grey30",
@@ -523,9 +523,9 @@ ggplot() +
     ) + 
     theme(
         axis.title = element_text(size = 17),
-        plot.title = element_text(size = 50, face = "bold"),
-        plot.subtitle = element_text(size = 20),
-        text = element_text(family = ".SF Compact Rounded"),
+        plot.title = element_text(size = 30, face = "bold"),
+        plot.subtitle = element_text(size = 15),
+        text = element_text(family = ".SF Compact Rounded", color = "grey20"),
         legend.title = element_text(
             size = 13,
             margin = ggplot2::margin(r = 20)
@@ -536,7 +536,7 @@ ggplot() +
         legend.title.position = "left",
         legend.direction = "horizontal",
     )
-
+plot_c 
 
 # quartz.save(
 #     "./plots/france_rf.png",
