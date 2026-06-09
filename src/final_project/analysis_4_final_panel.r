@@ -77,8 +77,9 @@ radarchart(
     radar_data_order_col,
     pcol = cols,
     plwd = c(13, 13, 13, 4, 4, 4, 4, 4), # to highlight A. muscaria and the two nearest species of tree (otherwise, the graph would look too messy and barely readable)
+    plty = c(1, 1, 1, 5, 5, 5, 5, 5),
     cglty = 6,
-    cglwd = 2.5,
+    cglwd = 3,
     cglcol = "grey50",
     vlcex = 1.2*2
 )
@@ -94,8 +95,8 @@ legend(
     y = -1.3,
     legend = names,
     col = cols, 
-    lwd = c(13, 13, 13, 4, 4, 4, 4, 4),
-    lty = c(1, 2, 3, 4, 5, 6, 1, 2),
+    lwd = c(13, 13, 13, 3, 3, 3, 3, 3),
+    lty = c(1, 1, 1, 5, 5, 5, 5, 5),
     cex = 3.5,
     bty = "n"
 )
