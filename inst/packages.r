@@ -1,3 +1,5 @@
+##### the entire script must be run before anything 
+
 library(Rchelsa)
 library(sf)
 library(terra)
