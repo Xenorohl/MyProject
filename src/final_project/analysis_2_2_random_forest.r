@@ -547,3 +547,70 @@ plot_c
 # )
 
 # ?theme
+
+
+
+### mapping the importance (choices made after doing a final panel once and wanting to change few things)
+
+    # setting the names as in the environment radar chart 
+
+df_importance_new$feature = c(
+    "Carbon", 
+    "Nitrogen", 
+    "pH", 
+    "Elevation", 
+    "T˚", 
+    "Rain", 
+    "Clouds",
+    "NDVI"
+)
+
+plot_e = ggplot(
+    data = df_importance_new,
+    aes(
+        x = MeanDecreaseGini,
+        y = reorder(feature, MeanDecreaseGini),
+        fill = reorder(feature, -MeanDecreaseGini)
+    )
+    ) + 
+    geom_col() + 
+    theme_fivethirtyeight() +
+    scale_fill_paletteer_d(
+        "MoMAColors::Flash"
+    ) +
+    labs( 
+        x = "Mean decrease in Gini",
+        title = "Variables importance",
+        subtitle = "According to the random forest algorithm"
+    ) + 
+    theme(
+        plot.background = element_rect(fill = "white"), 
+        panel.background = element_rect(fill = "white"),
+        plot.title = element_text(size = 30, face = "bold"), 
+        plot.subtitle = element_text(size = 15),
+        legend.position = "none", 
+        text = element_text(family = ".SF Compact Rounded"),
+        axis.text.y = element_text(size = 15),
+        axis.text.x = element_text(size = 15),
+        axis.title.x = element_text(size = 15, hjust = 1, vjust = 0)
+    )
+plot_e
+    # visually it is way better than before 
+    # all variables are above 50 
+    # the variables that explains the most is NDVI and then Temperature, elevation and precipitation
+    # a bit sad to see that soil variables are the three least important 
+    # I would have thought otherwise, but it's possible that this comes from the precision of the soilgrid which is 250m 
+    # But even with the least importance, Nitrogen and Carbon still are at ~80 of Mean decrease in Gini
+
+# x11()
+# plot_e 
+# quartz.save(
+#     "./plots/importance.png",
+#     type = "png",
+#     dpi = 300, 
+#     width = 8, 
+#     height = 11
+# )
+
+
+  

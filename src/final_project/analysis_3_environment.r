@@ -27,13 +27,14 @@ profils = matrix %>%
     group_by(species) %>%
     summarise(
         Elevation = mean(elevation, na.rm = TRUE),
-        Precipitation = mean(prec_mean, na.rm = TRUE), 
+        Rain = mean(prec_mean, na.rm = TRUE), 
         Temperature = mean(temp_mean, na.rm = TRUE), 
         NDVI = mean(ndvi_mean, na.rm = TRUE), 
         Carbon = mean(carbon_values, na.rm = TRUE), 
         pH = mean(ph_values, na.rm = TRUE),
         Nitrogen = mean(nitrogen_values, na.rm = TRUE), 
         Temperature_future = mean(fut_temp, na.rm = TRUE), 
+        Clouds = mean(clouds_mean, na.rm = TRUE),
         .groups = "drop"
     )
 
@@ -107,7 +108,7 @@ x11()
 
 par(
     family = ".SF Compact Rounded",
-    bg = "white",
+    bg = "white"
 )
 radarchart(
     radar_data_order,

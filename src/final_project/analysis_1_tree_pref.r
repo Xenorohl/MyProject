@@ -121,15 +121,17 @@ table(amanita_distance$nearest_tree_sp)
 amanita_distance$nearest_tree_sp = factor(
     amanita_distance$nearest_tree_sp,
     levels = c(
-        "Betula pubescens",
-        "Pinus cembra",
-        "Betula pendula", 
-        "Pinus mugo", 
-        "Pinus sylvestris", 
+        "Picea abies",
         "Abies alba", 
-        "Picea abies"
+        "Pinus sylvestris", 
+        "Pinus mugo", 
+        "Betula pendula", 
+        "Pinus cembra", 
+        "Betula pubescens"
     )
 )
+
+       
 
 
 plot_a = ggplot(
@@ -241,6 +243,7 @@ plot_b
 #     width = 11,
 #     height = 11
 #     )
+    # made for the pre_final_panel.png (I made adjustment after seeing the results)
 
 # x11()
 # plot_b
@@ -252,6 +255,16 @@ plot_b
 #     height = 11
 # )
 
+# x11()
+# plot_a
+# quartz.save(
+#     "./plots/nearest_tree_score_bis.png",
+#     type = "png",
+#     dpi = 300,
+#     width = 11,
+#     height = 11
+# )
+    # the one used in the true_final_panel.png 
 
 
 
