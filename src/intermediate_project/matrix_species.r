@@ -488,7 +488,7 @@ nrow(matrix_species) # around 700 observations lost. Still 7000 available tho
 
 ### mapping with clean geographic data 
 
-x11()
+# x11()
 ggplot(data = CH) + 
     geom_sf(
         fill = "aliceblue",
@@ -513,7 +513,7 @@ ggplot(data = CH) +
 
 
 
-x11()
+# x11()
 plot_species = ggplot(
     data = CH
     ) +

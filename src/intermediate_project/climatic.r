@@ -461,7 +461,7 @@ CH = ne_countries(
 ) # as explained in ./source/ecosystem.r
 
 # current with precipitation
-x11()
+# x11()
 ggplot(data = CH) + 
     geom_sf(
         fill = "aliceblue",
@@ -487,7 +487,7 @@ ggplot(data = CH) +
     theme_minimal() 
 
 # futur with altitude
-x11()
+# x11()
 ggplot(data = CH) + 
     geom_sf(
         fill = "aliceblue",
@@ -516,7 +516,7 @@ ggplot(data = CH) +
 
 ### Also for cloud covering 
 
-x11()
+# x11()
 ggplot(data = CH) + 
     geom_sf(
         fill = "#f5efd1",
@@ -546,7 +546,7 @@ ggplot(data = CH) +
     theme_minimal()
 
 # checking if clouds are positively correlated to the rain 
-x11()
+# x11()
 ggplot(
     data = matrix_full_eco_elev_clim,
     aes(

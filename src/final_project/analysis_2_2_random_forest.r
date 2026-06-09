@@ -489,7 +489,7 @@ picea = "Picea abies"
 FR_shadow = st_geometry(FR) + c(0.2 , -0.3) # same as previously done in /src/intermediate_project/satellite_data.r
 st_crs(FR_shadow) = st_crs(FR)
 
-x11()      
+# x11()      
 plot_c = ggplot() + 
     geom_sf(
         data = FR_shadow,   # projected shadow of france 

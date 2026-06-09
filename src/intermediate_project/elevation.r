@@ -118,7 +118,7 @@ ggplot(
 
 ### or another way to represent elevation and landcover 
 
-x11()
+# x11()
 ggplot(
   data = CH
   ) +

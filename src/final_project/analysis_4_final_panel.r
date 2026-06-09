@@ -76,7 +76,7 @@ par(                                                 # basically all that follow
 radarchart(
     radar_data_order_col,
     pcol = cols,
-    plwd = c(11, 11, 11, 4, 4, 4, 4, 4), 
+    plwd = c(13, 13, 13, 4, 4, 4, 4, 4), # to highlight A. muscaria and the two nearest species of tree (otherwise, the graph would look too messy and barely readable)
     cglty = 6,
     cglwd = 2.5,
     cglcol = "grey50",
@@ -94,7 +94,7 @@ legend(
     y = -1.3,
     legend = names,
     col = cols, 
-    lwd = c(11, 11, 11, 4, 4, 4, 4, 4),
+    lwd = c(13, 13, 13, 4, 4, 4, 4, 4),
     lty = c(1, 2, 3, 4, 5, 6, 1, 2),
     cex = 3.5,
     bty = "n"
@@ -129,7 +129,7 @@ final_panel = ggdraw() +
                                                                                 # to see how it looked on my computer at that time, just see plots/final_panel.png
 
 
-x11()
+# x11()
 final_panel
     # for the panel to display correctly, we must enlarge the window created by x11() (or windows() on windows)
     # the figure C doesn't allign well in this window since it was made with something else than ggplot 
@@ -147,7 +147,82 @@ final_panel
 # )
 
 
+##### Analysis / interpretation (copy-pasted from the other scripts) : 
+
+## Figure A 
+    # as we can see Picea abies and Abies alba are the trees that are more often the closest to A. muscaria 
+    # we could say from these results that A. muscaria prefere an association with those trees 
+    # what is interesting is that those are both fir trees 
+    # the two that comes after are Pinus sylvestris and Pinus mugo, also fir trees 
+    # it would mean that A. muscaria prefere fir trees rather than deciduous trees 
+    # before coming to any conclusion, it would be interesting to see how close those trees actually are 
+
+    # something to add up when I checked the distances (see plot_b in the dedicated file)
+    # the distinction isn't as clear as in plot_a 
+    # it seems like the distances are relatively always the same for the 4 fir trees 
+    # could mean that the fungi are simply taken in different environment with different tree species 
+    # however, one thing that is clearly weird is the distance itself 
+        # for 3 A. muscaria, the closest tree recorded was at 10km (the nearest one!)
+        # since A. muscaria is a obligatory mycorhizal fungi, this result is simply impossible 
+        # either I took not enough trees for each species, or not took a various enough number of species 
+        # could be the number of individuals for each species since it was pretty low compared to A. muscaria 
+        # furthermore, during the data curation, there were a lot of data point lost (NA values) or duplicates 
+        # those data lost influences a lot the result 
+    # One thing to note additionnally : 
+        # most of the data were taken on gbif 
+        # data from gbif are altered (not precise)
+        # means that a lot of those data are duplicate of location 
+        # some datapoint of a tree could have had the exact same spot as a tree, meaning the loss of one of the two 
+        # so, with this dataset, it is difficult to interpret which tree A. muscaria prefer out of these 7 species 
+        # a we can see, there are more points at even distances (like 5000m especially) which isn't realistic biologically speaking 
+            # this could be due to the altered data of gbif
+        # However, the results are still cool looking visually 
 
 
 
+## Figure B
 
+    # visually it is way better than before 
+    # all variables are above 50 
+    # the variables that explains the most is NDVI and then Temperature, elevation and precipitation
+    # a bit sad to see that soil variables are the three least important 
+    # I would have thought otherwise, but it's possible that this comes from the precision of the soilgrid which is 250m 
+    # But even with the least importance, Nitrogen and Carbon still are at ~80 of Mean decrease in Gini
+    # So it seems that to predict the presence of A. muscaria at best we should use variables that are not linked to soil 
+    # as explained, the data isn't really accurate (problem with gbif, soil grid of 250m, duplicates, ...)
+    # But according to this graph, the soil values are less important that the others 
+
+
+
+## Figure C 
+
+    # one cool thing to see is how close the shape of A. muscaria and P. abies are 
+    # this is an additionnal argument to the tree preference calculated before 
+    # this is somewhat logical to find that it ressembles A. muscaria a lot because it is the most often nearest tree, so it is in the same climate
+    # but as seen with the distances, P. abies are not that much closer than the other trees are (in term of distance)
+        # so it means that P. abies is close, but also have a same environment as A. muscaria 
+    # If we look at Betula pubescens, the shape is really different from A. muscaria 
+        # furthemore, it was the least often nearest tree of A. muscaria
+        # This indicates that the tree distance could be (even with all the shortfalls described in /src/final_project/analysis_1_tree_pref.r) a good proxy of relatedness of environment
+
+
+
+## Figure D 
+
+    # we can see that the presence is predicted more in the south that in the north 
+    # it is important to take into account that the model isn't completely accurate (~58%)
+    # normally we should find A. muscaria in more northern type of place 
+    # I have done a test to compare visually the model with the observed data points 
+        # it is really not complicate to modify the file analysis_2_1_grid_pred.r 
+            # all it needs is : 
+                # change the grid in the begining (lon(5:11), lat(45:48))
+                # change the ne_countrie with : 
+                    # # FR = ne_countries(          important to keep "FR" so the script can run without changing everything 
+                    #             scale = "large",
+                    #             country = "switzerland", 
+                    #             returnclass = "sf")
+                # change the 3 different soils pathway to have the swiss ones 
+            # since the changes aren't really big, I didnt add another script 
+        # the test was not really conclusive, the precision is indeed around 60% when it comes to compare with observed datas
+    # It is therefore important not to take this graph too seriously
+    # I decided to keep it because it is cool looking, and I was happy to have done a random forest 

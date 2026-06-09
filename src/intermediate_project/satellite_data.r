@@ -234,7 +234,7 @@ CH_shadow = st_geometry(CH) + c(0.07 , -0.07)
     # with a little help of chatgpt. just create a new sf object that is moved right and down to create a "shadow"
 st_crs(CH_shadow) = st_crs(CH) # setting the crs of "CH_shadow" to the same as "CH"
 
-x11()
+# x11()
 ggplot() +
     geom_sf(
         data = CH_shadow,
@@ -278,7 +278,7 @@ ggplot() +
 
 ### NDVI for each landcover 
 
-x11()
+# x11()
 ggplot(
     data = matrix_final,
     aes(

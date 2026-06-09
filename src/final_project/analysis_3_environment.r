@@ -104,7 +104,7 @@ names
 
 ### drawing the radar chart 
 
-x11()
+# x11()
 
 par(
     family = ".SF Compact Rounded",
